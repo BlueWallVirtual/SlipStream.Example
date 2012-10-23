@@ -1,0 +1,11 @@
+<!-- SlipStream.Example.xml -->
+<Nini>
+  <Section Name="Modules">
+  </Section>
+  <Section Name="SlipStream">
+    <Key Name="ServerPort" Value="8102" />
+    <Key Name="Enabled" Value="false" />
+    <Key Name="CodeWord" Value="ShaZamm!" />
+    <Key Name="LocalServiceModule" Value="BlueWall.SlipStream.Example.dll:ExampleService" />
+  </Section>
+</Nini>
