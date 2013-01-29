@@ -171,10 +171,13 @@ namespace BlueWall.SlipStream.Example
 			// Look in our main config first
 			IConfig serverConfig = Config.Configs[ConfigName];
             if (serverConfig == null)
+            {
 				// Look for individual config file
 				serverConfig = GetConfig ();
-			if (serverConfig == null)
-				throw new Exception(String.Format("[SlipStream]: Cannot file configuration for {0}, not loaded!", ConfigName));
+			    if (serverConfig == null)
+				    throw new Exception(String.Format("[SlipStream]: Cannot file configuration for {0}, not loaded!", ConfigName));
+                Config.Merge(serverConfig.ConfigSource);
+            }
 
 			uint serverPort = (uint) serverConfig.GetInt("ServerPort", 0);
             ServiceModuleName = serverConfig.GetString("LocalServiceModule",
@@ -200,8 +203,6 @@ namespace BlueWall.SlipStream.Example
 			}
 			else
 				Enabled = true;
-
-            Config.Merge(serverConfig.ConfigSource);
 
 			return (uint) serverPort;
 		}
