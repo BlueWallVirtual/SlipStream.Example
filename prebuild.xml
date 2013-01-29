@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<Project frameworkVersion="v3_5" name="BlueWall.SlipStream.Example" path="addon-modules/SlipStream.Example/Src" type="Library">
+<Project frameworkVersion="v3_5" name="SlipStream.Example" path="addon-modules/SlipStream.Example/Src" type="Library">
      <Configuration name="Debug">
        <Options>
          <OutputPath>../../../bin/</OutputPath>
@@ -13,6 +13,7 @@
 
      <ReferencePath>../../../bin/</ReferencePath>
      <Reference name="System"/>
+     <Reference name="System.Core"/>
      <Reference name="System.Xml"/>
      <Reference name="System.Web"/>
      <Reference name="OpenMetaverse" path="../../../bin/"/>
